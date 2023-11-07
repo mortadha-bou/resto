@@ -1,0 +1,74 @@
+<!--::regervation_part start::-->
+<section class="regervation_part section_padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-5">
+                <div class="section_tittle">
+                    <p>Reservation</p>
+                    <h2>Book A Table</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="regervation_part_iner">
+                    <form #reservationForm="ngForm" (ngSubmit)="addReservation()">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <input type="text" class="form-control"  [(ngModel)]="reservation.name" [ngModelOptions]="{standalone:true}"  placeholder="Name *">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <input type="text" class="form-control"   [(ngModel)]="reservation.email" [ngModelOptions]="{standalone:true}" 
+                                    placeholder="Email address *">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <select class="form-control" [(ngModel)]="reservation.person" [ngModelOptions]="{standalone:true}"  placeholder="Nombres des personnes*">
+                                    <option value="0" selected>Persons *</option>
+                                    <option value="1">Number of guests 1</option>
+                                    <option value="2">Number of guests 2</option>
+                                    <option value="3">Number of guests 3</option>
+                                    <option value="4">Number of guests 4</option>
+                                </select>
+                                
+                       
+                            </div>
+                            <div class="form-group col-md-6">
+                                <input type="text" class="form-control" [(ngModel)]="reservation.phone" [ngModelOptions]="{standalone:true}" id="pnone" placeholder="Phone number *">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <div class="input-group date">
+                                    <input type="text" class="form-control" [(ngModel)]="reservation.date" [ngModelOptions]="{standalone:true}" placeholder="Date *" />
+                                </div>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <select class="form-control" [(ngModel)]="reservation.time" [ngModelOptions]="{standalone:true}" placeholder="Time *" id="Select2">
+                                    <option value="" selected>Time *</option>
+                                    <option value="8 TO 10AM">8 AM TO 10AM</option>
+                                    <option value="10 AM TO 12PM">10 AM TO 12PM</option>
+                                    <option value="12PM TO 2PM">12PM TO 2PM</option>
+                                    <option value="2PM TO 4PM">2PM TO 4PM</option>
+                                    <option value="4PM TO 6 PM">4PM TO 6PM</option>
+                                    <option value="6PM TO 8PM">6PM TO 8PM</option>
+                                    <option value="8PM TO 10PM">8PM TO 10PM</option>
+                                    <option value="10PM TO 12 PM">10PM TO 12PM</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <textarea class="form-control" [(ngModel)]="reservation.note" [ngModelOptions]="{standalone:true}" id="Textarea" rows="4"
+                                    placeholder="Your note *"></textarea>
+                            </div>
+                        
+                        </div>
+  
+  
+                        
+                      <div class="form-group">
+                        <input type="submit" class="btn btn-primary py-3 px-5" value="addres">
+                      </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+  <!--::regervation_part end::-->

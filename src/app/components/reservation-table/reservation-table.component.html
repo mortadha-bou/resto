@@ -1,0 +1,44 @@
+<br><br><br><br> <br><br>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Number</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Date</th>
+        <th scope="col">Time</th>
+        <th scope="col">Note</th>
+        <th scope="col">Action</th>
+
+      </tr>
+    </thead>
+    <tbody>
+        
+        
+
+        <tr *ngFor="let reservation of reservationTab ">
+       
+        
+        <td>{{reservation.id}}</td>
+        <td>{{reservation.name}}</td>
+        <td>{{reservation.email}}</td>
+        <td>{{reservation.person}}</td>
+        <td>{{reservation.phone}}</td>
+        <td>{{reservation.date}}</td>
+        <td>{{reservation.time}}</td>
+        <td>{{reservation.note}}</td>
+        <td> 
+        <button class="btn btn-warning" (click)="goToEdit(reservation.id)">Edit</button>
+        <button class="btn btn-danger" (click)="deleteReservation(reservation.id)">Delte</button></td>
+        </tr> 
+     
+      
+        
+      
+   
+   
+    </tbody>
+  </table>

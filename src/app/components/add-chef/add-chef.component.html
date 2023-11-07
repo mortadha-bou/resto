@@ -1,0 +1,35 @@
+<section class="regervation_part section_padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-5">
+                <div class="section_tittle">
+        
+                    <h2>Add chef</h2>
+                </div>
+            </div>
+        </div>
+        <div class="site-section">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-7">
+                  <form #chefForm="ngForm" (ngSubmit)="addChef()">
+                    <div class="form-group">
+                      <input type="text" class="form-control" [(ngModel)]="chef.name" [ngModelOptions]="{standalone:true}"  placeholder="name">
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" [(ngModel)]="chef.role" [ngModelOptions]="{standalone:true}"  placeholder="role">
+                    </div>
+                   
+                      
+                      <div class="form-group">
+                        <input type="submit" class="btn btn-primary py-3 px-5" value="addchef">
+                      </div>
+                    
+                    
+                  </form>  
+                </div>
+              </div>
+            </div>
+          </div>   
+         </div>
+  </section>
